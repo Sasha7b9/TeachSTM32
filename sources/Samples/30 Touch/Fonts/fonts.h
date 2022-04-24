@@ -85,7 +85,7 @@ extern sFONT Font8;
 /** @defgroup FONTS_Exported_Constants
   * @{
   */ 
-#define LINE(x) ((x) * (((sFONT *)BSP_LCD_GetFont())->Height))
+#define LINE(x) ((x) * (((sFONT *)LCD::GetFont())->Height))
 
 /**
   * @}
