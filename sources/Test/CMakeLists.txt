@@ -25,19 +25,21 @@ add_compile_options(/wd5220)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 
 
-file(GLOB BSP          ../common/BSP/*.*)
-file(GLOB SRC          src/*.*)
-file(GLOB DISPLAY      src/Display/*.*)
-file(GLOB HARDWARE     src/Hardware/*.*)
-file(GLOB HARDWARE_HAL src/Hardware/HAL/*.*)
+file(GLOB BSP           ../common/BSP/*.*)
+file(GLOB SRC           src/*.*)
+file(GLOB DISPLAY       src/Display/*.*)
+file(GLOB DISPLAY_TOUCH src/Display/Touch/*.*)
+file(GLOB HARDWARE      src/Hardware/*.*)
+file(GLOB HARDWARE_HAL  src/Hardware/HAL/*.*)
 
-source_group(BSP          FILES ${BSP})
-source_group(src          FILES ${SRC})
-source_group(Display      FILES ${DISPLAY})
-source_group(Hardware     FILES ${HARDWARE})
-source_group(Hardware/HAL FILES ${HARDWARE_HAL})
+source_group(BSP           FILES ${BSP})
+source_group(src           FILES ${SRC})
+source_group(Display       FILES ${DISPLAY})
+source_group(Display/Touch FILES ${DISPLAY_TOUCH})
+source_group(Hardware      FILES ${HARDWARE})
+source_group(Hardware/HAL  FILES ${HARDWARE_HAL})
 
 add_library(${PROJECT_NAME} ${BSP} ${SRC}
-                            ${DISPLAY}
+                            ${DISPLAY} ${DISPLAY_TOUCH}
                             ${HARDWARE} ${HARDWARE_HAL}
 )

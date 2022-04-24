@@ -773,6 +773,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Display/Touch</GroupName>
+          <Files>
+            <File>
+              <FileName>Touch.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\src\Display\Touch\Touch.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Touch.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\Display\Touch\Touch.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Hardware</GroupName>
           <Files>
             <File>

@@ -18,8 +18,6 @@ int main(void)
 
 	Display::Init();
 
-	GT811::Init();
-
 	while (1)
 	{
 		if (TS_flag == 1)

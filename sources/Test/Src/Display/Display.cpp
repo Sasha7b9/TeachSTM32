@@ -1,10 +1,13 @@
 #include "Display/Display.h"
+#include "Display/Touch/Touch.h"
 #include <stm32746g_lcd.h>
 
 
 void Display::Init()
 {
     LCD::Init();
+
+	Touch::Init();
 
 	LCD::SetLayerVisible(1, DISABLE);
 	LCD::SelectLayer(0);
