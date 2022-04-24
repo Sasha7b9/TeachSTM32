@@ -88,7 +88,7 @@ void Display::Update()
 	}
 	else
 	{
-		if (meter.ElapsedTime() > 10)
+		if (meter.ElapsedTime() > 5)
 		{
 			LCD::SetTextColor(LCD_COLOR_BLACK);
 			Region(1024, 550).Fill(0, 50);
