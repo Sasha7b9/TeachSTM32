@@ -805,11 +805,6 @@
               <FilePath>../Src/gpio.c</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/main.c</FilePath>
-            </File>
-            <File>
               <FileName>dma2d.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/dma2d.c</FilePath>
@@ -878,6 +873,11 @@
               <FileName>usart.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Inc\usart.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\main.cpp</FilePath>
             </File>
           </Files>
         </Group>
