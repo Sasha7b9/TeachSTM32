@@ -40,6 +40,7 @@
 #include "GT811.h"
 #include "TS_I2C.h"
 #include "i2c.h"
+#include "stdio.h"
 /** @addtogroup BSP
   * @{
   */

@@ -339,7 +339,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F746xx,__STRICT_ANSI__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\common\stm32CubeF7\Drivers\STM32F7xx_HAL_Driver\Inc;..\Inc;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Include;..\BSP</IncludePath>
+              <IncludePath>..\..\..\common\stm32CubeF7\Drivers\STM32F7xx_HAL_Driver\Inc;..\Inc;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Include;..\..\..\common\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -885,24 +885,44 @@
           <GroupName>BSP</GroupName>
           <Files>
             <File>
+              <FileName>GT811.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\common\BSP\GT811.c</FilePath>
+            </File>
+            <File>
+              <FileName>GT811.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\common\BSP\GT811.h</FilePath>
+            </File>
+            <File>
               <FileName>stm32746g_lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\stm32746g_lcd.c</FilePath>
+              <FilePath>..\..\..\common\BSP\stm32746g_lcd.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32746g_lcd.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\common\BSP\stm32746g_lcd.h</FilePath>
             </File>
             <File>
               <FileName>stm32746g_sdram.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\stm32746g_sdram.c</FilePath>
+              <FilePath>..\..\..\common\BSP\stm32746g_sdram.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32746g_sdram.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\common\BSP\stm32746g_sdram.h</FilePath>
             </File>
             <File>
               <FileName>TS_I2C.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\BSP\TS_I2C.c</FilePath>
+              <FilePath>..\..\..\common\BSP\TS_I2C.c</FilePath>
             </File>
             <File>
-              <FileName>GT811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\GT811.c</FilePath>
+              <FileName>TS_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\..\common\BSP\TS_I2C.h</FilePath>
             </File>
           </Files>
         </Group>
