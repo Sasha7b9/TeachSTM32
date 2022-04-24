@@ -4,3 +4,6 @@ sources/generated/
 
 sources/Samples/30 Touch/MDK-ARM/Listings-Debug/
 sources/Samples/30 Touch/MDK-ARM/Objects-Debug/
+sources/Test/Listings-Debug/
+sources/Test/Objects-Debug/
+sources/Test/DebugConfig/
