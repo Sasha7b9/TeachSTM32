@@ -1,11 +1,11 @@
-project (Sample30)
+project (Test)
 
-include_directories(../../common/MDK_KEIL/CMSIS/
-                    Inc
-                    ../../common/BSP
-                    ../../common/stm32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc/
-                    ../../common/stm32CubeF7/Drivers/CMSIS/Device/ST/STM32F7xx/Include/
-                    ../../common/stm32CubeF7/Drivers/CMSIS/Include/
+include_directories(../common/MDK_KEIL/CMSIS/
+                    src
+                    ../common/BSP
+                    ../common/stm32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc/
+                    ../common/stm32CubeF7/Drivers/CMSIS/Device/ST/STM32F7xx/Include/
+                    ../common/stm32CubeF7/Drivers/CMSIS/Include/
 )
 
 add_definitions(-DSTM32F746xx -DDEVICE -DVS_KEIL)
@@ -23,8 +23,8 @@ add_compile_options(/wd5220)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 
-file(GLOB BSP       ../../common/BSP/*.*)
-file(GLOB SRC       Src/*.* Inc/*.*)
+file(GLOB BSP       ../common/BSP/*.*)
+file(GLOB SRC       src/*.*)
 
 source_group(BSP    FILES ${BSP})
 source_group(src    FILES ${SRC})

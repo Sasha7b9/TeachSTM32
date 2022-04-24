@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F746xx,__STRICT_ANSI__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\common\stm32CubeF7\Drivers\STM32F7xx_HAL_Driver\Inc;Inc;..\common\stm32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\common\stm32CubeF7\Drivers\CMSIS\Include;..\common\BSP</IncludePath>
+              <IncludePath>..\common\stm32CubeF7\Drivers\STM32F7xx_HAL_Driver\Inc;.\src;..\common\stm32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\common\stm32CubeF7\Drivers\CMSIS\Include;..\common\BSP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -708,7 +708,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Application/User</GroupName>
+          <GroupName>src</GroupName>
           <GroupOption>
             <CommonProperty>
               <UseCPPCompiler>0</UseCPPCompiler>
@@ -780,56 +780,6 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>dma.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\dma.h</FilePath>
-            </File>
-            <File>
-              <FileName>dma2d.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\dma2d.h</FilePath>
-            </File>
-            <File>
-              <FileName>fmc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\fmc.h</FilePath>
-            </File>
-            <File>
-              <FileName>gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\i2c.h</FilePath>
-            </File>
-            <File>
-              <FileName>ltdc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\ltdc.h</FilePath>
-            </File>
-            <File>
-              <FileName>mxconstants.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\mxconstants.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f7xx_hal_conf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\stm32f7xx_hal_conf.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f7xx_it.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\stm32f7xx_it.h</FilePath>
-            </File>
-            <File>
-              <FileName>usart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Inc\usart.h</FilePath>
-            </File>
-            <File>
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>Src\main.cpp</FilePath>
@@ -898,6 +848,56 @@
               <FileName>stm32f7xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>Src\stm32f7xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>dma.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\dma.h</FilePath>
+            </File>
+            <File>
+              <FileName>dma2d.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\dma2d.h</FilePath>
+            </File>
+            <File>
+              <FileName>fmc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\fmc.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\i2c.h</FilePath>
+            </File>
+            <File>
+              <FileName>ltdc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\ltdc.h</FilePath>
+            </File>
+            <File>
+              <FileName>mxconstants.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\mxconstants.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\stm32f7xx_hal_conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\stm32f7xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>usart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\usart.h</FilePath>
             </File>
           </Files>
         </Group>
