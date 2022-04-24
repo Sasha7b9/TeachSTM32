@@ -236,7 +236,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if(GPIO_Pin == GPIO_PIN_7)
 	{
 		TS_flag = 1;
-		printf("ok\r\n");
+//		printf("ok\r\n");
 	}
 }
 /* USER CODE END 4 */

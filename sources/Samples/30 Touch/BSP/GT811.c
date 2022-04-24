@@ -120,7 +120,7 @@ uint16_t GT811_ReadID()
 {
 	uint8_t value[2];
 	I2C_ReadReg(GT811_CMD_WR,GT811_VERSION,value,2);
-	printf("ID    %x\r\n",(((uint16_t)value[0] << 8) + value[1]));
+//	printf("ID    %x\r\n",(((uint16_t)value[0] << 8) + value[1]));
 	return value[0]*0x100+value[1];
 }
 

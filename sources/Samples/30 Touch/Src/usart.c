@@ -37,6 +37,8 @@
 
 #include "gpio.h"
 
+//#include "stdio.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -120,13 +122,16 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   * @param  None
   * @retval None
   */
-int fputc(int ch, FILE *f)
-{
-  /* write a character to the uart1 and Loop until the end of transmission */
-  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF); 
 
-  return ch;
-}
+//typedef struct __FILE FILE;
+//
+//int fputc(int ch, FILE *f)
+//{
+//  /* write a character to the uart1 and Loop until the end of transmission */
+//  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF); 
+//
+//  return ch;
+//}
 /* USER CODE END 1 */
 
 /**
