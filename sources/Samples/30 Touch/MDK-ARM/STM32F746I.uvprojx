@@ -790,24 +790,9 @@
               <FilePath>../Src/stm32f7xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>fmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/fmc.c</FilePath>
-            </File>
-            <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/dma2d.c</FilePath>
             </File>
             <File>
               <FileName>ltdc.c</FileName>
@@ -878,6 +863,41 @@
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\Src\main.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>dma.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\dma.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>dma2d.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\dma2d.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>fmc.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\fmc.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\image.c</FilePath>
+            </File>
+            <File>
+              <FileName>image.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\image.h</FilePath>
+            </File>
+            <File>
+              <FileName>image1.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\image1.h</FilePath>
+            </File>
+            <File>
+              <FileName>image2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Src\image2.h</FilePath>
             </File>
           </Files>
         </Group>
