@@ -1,5 +1,12 @@
 // 2022/4/24 22:31:45 (c) Aleksandr Shevchenko e-mail : Sasha7b9@tut.by
 #include "Hardware/HAL/HAL.h"
+#include "gpio.h"
+#include "dma.h"
+#include "dma2d.h"
+#include "fmc.h"
+#include "ltdc.h"
+#include "usart.h"
+#include <stm32746g_sdram.h>
 #include <stm32f7xx_hal.h>
 
 
@@ -14,6 +21,17 @@ void HAL::Init()
     HAL_Init();
 
     SystemClock_Config();
+
+    MX_GPIO_Init();
+    MX_DMA_Init();
+    MX_DMA2D_Init();
+    MX_FMC_Init();
+    //  MX_I2C4_Init();
+    MX_LTDC_Init();
+    MX_USART1_UART_Init();
+
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
+    BSP_SDRAM_Init();
 }
 
 

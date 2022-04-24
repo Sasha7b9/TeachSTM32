@@ -1,15 +1,8 @@
 #include "stm32f7xx_hal.h"
-#include "dma.h"
-#include "dma2d.h"
 #include "i2c.h"
-#include "ltdc.h"
-#include "usart.h"
-#include "gpio.h"
-#include "fmc.h"
 #include "stdio.h"
 #include "Hardware/HAL/HAL.h"
 
-#include <stm32746g_sdram.h>
 #include <stm32746g_LCD.h>
 #include <GT811.h>
 
@@ -26,16 +19,6 @@ int main(void)
 {
 	HAL::Init();
 
-	MX_GPIO_Init();
-	MX_DMA_Init();
-	MX_DMA2D_Init();
-	MX_FMC_Init();
-	//  MX_I2C4_Init();
-	MX_LTDC_Init();
-	MX_USART1_UART_Init();
-
-	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
-	BSP_SDRAM_Init();
 	LCD::Init();
 	GT811::Init();
 
@@ -96,14 +79,7 @@ int main(void)
 	}
 }
 
-/** System Clock Configuration
-*/
 
-
-/* USER CODE BEGIN 4 */
-/**
-  * @}
-  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if (GPIO_Pin == GPIO_PIN_7)
@@ -112,7 +88,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		printf("ok\r\n");
 	}
 }
-/* USER CODE END 4 */
+
 
 #ifdef USE_FULL_ASSERT
 
