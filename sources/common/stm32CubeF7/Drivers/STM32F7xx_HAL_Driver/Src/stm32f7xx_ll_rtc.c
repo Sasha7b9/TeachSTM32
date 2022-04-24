@@ -2,16 +2,35 @@
   ******************************************************************************
   * @file    stm32f7xx_ll_rtc.c
   * @author  MCD Application Team
+  * @version V1.2.1
+  * @date    24-March-2017
   * @brief   RTC LL module driver.
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2017 STMicroelectronics.
-  * All rights reserved.
+  * <h2><center>&copy; COPYRIGHT(c) 2017 STMicroelectronics</center></h2>
   *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
+  * Redistribution and use in source and binary forms, with or without modification,
+  * are permitted provided that the following conditions are met:
+  *   1. Redistributions of source code must retain the above copyright notice,
+  *      this list of conditions and the following disclaimer.
+  *   2. Redistributions in binary form must reproduce the above copyright notice,
+  *      this list of conditions and the following disclaimer in the documentation
+  *      and/or other materials provided with the distribution.
+  *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  *      may be used to endorse or promote products derived from this software
+  *      without specific prior written permission.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   *
   ******************************************************************************
   */
@@ -86,7 +105,18 @@
 
 #define IS_LL_RTC_DAY(__DAY__)    (((__DAY__) >= 1U) && ((__DAY__) <= 31U))
 
-#define IS_LL_RTC_MONTH(__MONTH__) (((__MONTH__) >= 1U) && ((__MONTH__) <= 12U))
+#define IS_LL_RTC_MONTH(__VALUE__) (((__VALUE__) == LL_RTC_MONTH_JANUARY) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_FEBRUARY) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_MARCH) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_APRIL) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_MAY) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_JUNE) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_JULY) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_AUGUST) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_SEPTEMBER) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_OCTOBER) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_NOVEMBER) \
+                                 || ((__VALUE__) == LL_RTC_MONTH_DECEMBER))
 
 #define IS_LL_RTC_YEAR(__YEAR__) ((__YEAR__) <= 99U)
 
@@ -316,7 +346,7 @@ ErrorStatus LL_RTC_TIME_Init(RTC_TypeDef *RTCx, uint32_t RTC_Format, LL_RTC_Time
     }
 
     /* Exit Initialization mode */
-    LL_RTC_DisableInitMode(RTCx);
+    LL_RTC_DisableInitMode(RTC);
 
     /* If  RTC_CR_BYPSHAD bit = 0, wait for synchro else this check is not needed */
     if (LL_RTC_IsShadowRegBypassEnabled(RTCx) == 0U)
@@ -354,7 +384,7 @@ void LL_RTC_TIME_StructInit(LL_RTC_TimeTypeDef *RTC_TimeStruct)
   * @param  RTC_Format This parameter can be one of the following values:
   *         @arg @ref LL_RTC_FORMAT_BIN
   *         @arg @ref LL_RTC_FORMAT_BCD
-  * @param  RTC_DateStruct pointer to a RTC_DateTypeDef structure that contains
+  * @param  RTC_DateStruct: pointer to a RTC_DateTypeDef structure that contains
   *                         the date configuration information for the RTC.
   * @retval An ErrorStatus enumeration value:
   *          - SUCCESS: RTC Day register is configured
@@ -404,7 +434,7 @@ ErrorStatus LL_RTC_DATE_Init(RTC_TypeDef *RTCx, uint32_t RTC_Format, LL_RTC_Date
     }
 
     /* Exit Initialization mode */
-    LL_RTC_DisableInitMode(RTCx);
+    LL_RTC_DisableInitMode(RTC);
 
     /* If  RTC_CR_BYPSHAD bit = 0, wait for synchro else this check is not needed */
     if (LL_RTC_IsShadowRegBypassEnabled(RTCx) == 0U)
@@ -864,3 +894,4 @@ ErrorStatus LL_RTC_WaitForSynchro(RTC_TypeDef *RTCx)
 
 #endif /* USE_FULL_LL_DRIVER */
 
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
