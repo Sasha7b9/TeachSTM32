@@ -2,8 +2,6 @@
   ******************************************************************************
   * @file    stm32f7xx_hal_hash_ex.h
   * @author  MCD Application Team
-  * @version V1.2.1
-  * @date    24-March-2017
   * @brief   Header file of HASH HAL Extension module.
   ******************************************************************************
   * @attention
@@ -43,7 +41,7 @@
  extern "C" {
 #endif
 
-#if defined (STM32F756xx) || defined (STM32F777xx) || defined (STM32F779xx)
+#if defined (STM32F756xx) || defined (STM32F777xx) || defined (STM32F779xx) || defined (STM32F750xx)
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f7xx_hal_def.h"
 
@@ -185,7 +183,7 @@ void HAL_HASHEx_IRQHandler(HASH_HandleTypeDef *hhash);
 /**
   * @}
   */ 
-#endif /* STM32F756xx || STM32F777xx || STM32F779xx */
+#endif /* STM32F756xx || STM32F777xx || STM32F779xx || STM32F750xx */
 /**
   * @}
   */ 
