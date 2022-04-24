@@ -6,6 +6,7 @@
 #include "fmc.h"
 #include "ltdc.h"
 #include "usart.h"
+#include "i2c.h"
 #include <stm32746g_sdram.h>
 #include <stm32f7xx_hal.h>
 

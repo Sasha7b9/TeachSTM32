@@ -1,8 +1,4 @@
-#include "stm32f7xx_hal.h"
-#include "i2c.h"
-#include "stdio.h"
 #include "Hardware/HAL/HAL.h"
-
 #include <stm32746g_LCD.h>
 #include <GT811.h>
 
@@ -85,7 +81,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if (GPIO_Pin == GPIO_PIN_7)
 	{
 		TS_flag = 1;
-		printf("ok\r\n");
 	}
 }
 
