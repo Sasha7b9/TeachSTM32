@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'STM32F746I' 
+ * Project: 'Test' 
  * Target:  'Debug' 
  */
 
