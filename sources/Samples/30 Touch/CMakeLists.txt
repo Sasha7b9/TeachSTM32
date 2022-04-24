@@ -2,6 +2,7 @@ project (Sample30)
 
 include_directories(../../common/MDK_KEIL/CMSIS/
                     Inc
+                    ../../common/BSP
                     ../../common/stm32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc/
                     ../../common/stm32CubeF7/Drivers/CMSIS/Device/ST/STM32F7xx/Include/
                     ../../common/stm32CubeF7/Drivers/CMSIS/Include/
@@ -11,6 +12,7 @@ add_definitions(-DSTM32F746xx -DDEVICE -DVS_KEIL)
 
 add_compile_options(/wd4100)
 add_compile_options(/wd4459)
+add_compile_options(/wd4464)
 add_compile_options(/wd4820)
 add_compile_options(/wd5220)
 
