@@ -24,3 +24,4 @@ if(${CMAKE_BUILD_TYPE} STREQUAL Debug)
 endif()
 
 add_subdirectory("Samples/30 Touch")
+add_subdirectory(Test)
