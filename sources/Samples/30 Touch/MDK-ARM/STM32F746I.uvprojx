@@ -780,34 +780,9 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>stm32f7xx_hal_msp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/stm32f7xx_hal_msp.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f7xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32f7xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/ltdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/i2c.c</FilePath>
             </File>
             <File>
               <FileName>dma.h</FileName>
@@ -880,11 +855,6 @@
               <FilePath>..\Src\fmc.cpp</FilePath>
             </File>
             <File>
-              <FileName>image.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\image.c</FilePath>
-            </File>
-            <File>
               <FileName>image.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Src\image.h</FilePath>
@@ -898,6 +868,36 @@
               <FileName>image2.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Src\image2.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\gpio.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\i2c.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>image.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\image.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>ltdc.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\ltdc.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_msp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\stm32f7xx_hal_msp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>usart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Src\usart.cpp</FilePath>
             </File>
           </Files>
         </Group>
