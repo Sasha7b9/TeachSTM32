@@ -336,7 +336,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--C99</MiscControls>
+              <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F746xx,__STRICT_ANSI__</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\common\stm32CubeF7\Drivers\STM32F7xx_HAL_Driver\Inc;..\Inc;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Include;..\..\..\common\stm32CubeF7\Drivers\CMSIS\Include;..\..\..\common\BSP</IncludePath>

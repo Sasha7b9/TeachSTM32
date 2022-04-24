@@ -123,7 +123,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   * @retval None
   */
 #ifndef WIN32
-int fputc(int ch, FILE *f)
+int std::fputc(int ch, FILE *f)
 {
   /* write a character to the uart1 and Loop until the end of transmission */
   HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF); 

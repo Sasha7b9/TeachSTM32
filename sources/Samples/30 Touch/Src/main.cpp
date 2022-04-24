@@ -38,18 +38,18 @@ int main(void)
 
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
 	BSP_SDRAM_Init();
-	BSP_LCD_Init();
+	LCD::Init();
 	GT811_Init();
 
-	BSP_LCD_SetLayerVisible(1, DISABLE);
-	BSP_LCD_SelectLayer(0);
-	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
-	BSP_LCD_SetBackColor(LCD_COLOR_BLACK);
-	BSP_LCD_Clear(BSP_LCD_GetBackColor());
-	BSP_LCD_SetFont(&Font24);
-	BSP_LCD_DisplayStringAt(0, 0, (uint8_t *)"Capacitive touch screen test", CENTER_MODE);
-	BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-	BSP_LCD_DrawHLine(0, 30, 1024);
+	LCD::SetLayerVisible(1, DISABLE);
+	LCD::SelectLayer(0);
+	LCD::SetTextColor(LCD_COLOR_BLUE);
+	LCD::SetBackColor(LCD_COLOR_BLACK);
+	LCD::Clear(LCD::GetBackColor());
+	LCD::SetFont(&Font24);
+	LCD::DisplayStringAt(0, 0, (uint8_t *)"Capacitive touch screen test", CENTER_MODE);
+	LCD::SetTextColor(LCD_COLOR_WHITE);
+	LCD::DrawHLine(0, 30, 1024);
 
 	while (1)
 	{
@@ -63,10 +63,10 @@ int main(void)
 				{
 					if (TouchPoit & 0x01)
 					{
-						BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-						BSP_LCD_FillCircle(TS_BKState.touchX[i], TS_BKState.touchY[i], 20);
-						BSP_LCD_DrawVLine(TS_BKState.touchX[i], 55, 580);
-						BSP_LCD_DrawHLine(5, TS_BKState.touchY[i], 1004);
+						LCD::SetTextColor(LCD_COLOR_BLACK);
+						LCD::FillCircle(TS_BKState.touchX[i], TS_BKState.touchY[i], 20);
+						LCD::DrawVLine(TS_BKState.touchX[i], 55, 580);
+						LCD::DrawHLine(5, TS_BKState.touchY[i], 1004);
 					}
 					TouchPoit >>= 1;
 				}
@@ -81,10 +81,10 @@ int main(void)
 						if (TS_State.touchX[i] < 20)TS_State.touchX[i] = 20;
 						if (TS_State.touchX[i] > 1004)TS_State.touchX[i] = 1004;
 
-						BSP_LCD_SetTextColor(PointColor[i]);
-						BSP_LCD_FillCircle(TS_State.touchX[i], TS_State.touchY[i], 20);
-						BSP_LCD_DrawVLine(TS_State.touchX[i], 55, 580);
-						BSP_LCD_DrawHLine(5, TS_State.touchY[i], 1004);
+						LCD::SetTextColor(PointColor[i]);
+						LCD::FillCircle(TS_State.touchX[i], TS_State.touchY[i], 20);
+						LCD::DrawVLine(TS_State.touchX[i], 55, 580);
+						LCD::DrawHLine(5, TS_State.touchY[i], 1004);
 						TS_BKState.touchX[i] = TS_State.touchX[i];
 						TS_BKState.touchY[i] = TS_State.touchY[i];
 					}
