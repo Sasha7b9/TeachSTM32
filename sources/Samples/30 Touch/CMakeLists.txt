@@ -7,7 +7,12 @@ include_directories(../../common/MDK_KEIL/CMSIS/
                     ../../common/stm32CubeF7/Drivers/CMSIS/Include/
 )
 
-add_definitions(-DSTM32F746xx -DDEVICE -DVS_KEIL -D__CC_ARM)
+add_definitions(-DSTM32F746xx -DDEVICE -DVS_KEIL)
+
+add_compile_options(/wd4100)
+add_compile_options(/wd4459)
+add_compile_options(/wd4820)
+add_compile_options(/wd5220)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 
