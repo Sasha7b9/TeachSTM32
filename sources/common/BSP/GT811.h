@@ -26,11 +26,11 @@
 
 typedef struct
 {
-	uint8_t  touchDetected;                /*!< Total number of active touches detected at last scan */
-	uint16_t touchX[TS_MAX_NB_TOUCH];      /*!< Touch X[0], X[1] coordinates on 12 bits */
-	uint16_t touchY[TS_MAX_NB_TOUCH];      /*!< Touch Y[0], Y[1] coordinates on 12 bits */
-	uint8_t  touchWeight[TS_MAX_NB_TOUCH]; /*!< Touch_Weight[0], Touch_Weight[1] : weight property of touches */
-	uint32_t SensorId; /*!< type of gesture detected : take value of type @ref TS_GestureIdTypeDef */
+    uint8_t  touchDetected;                /*!< Total number of active touches detected at last scan */
+    uint16_t touchX[TS_MAX_NB_TOUCH];      /*!< Touch X[0], X[1] coordinates on 12 bits */
+    uint16_t touchY[TS_MAX_NB_TOUCH];      /*!< Touch Y[0], Y[1] coordinates on 12 bits */
+    uint8_t  touchWeight[TS_MAX_NB_TOUCH]; /*!< Touch_Weight[0], Touch_Weight[1] : weight property of touches */
+    uint32_t SensorId; /*!< type of gesture detected : take value of type @ref TS_GestureIdTypeDef */
 } TS_StateTypeDef;
 
 
