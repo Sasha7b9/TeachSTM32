@@ -780,11 +780,6 @@
           </GroupOption>
           <Files>
             <File>
-              <FileName>stm32f7xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/stm32f7xx_it.c</FilePath>
-            </File>
-            <File>
               <FileName>dma.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\Inc\dma.h</FilePath>
@@ -898,6 +893,11 @@
               <FileName>usart.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\Src\usart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\stm32f7xx_it.c</FilePath>
             </File>
           </Files>
         </Group>
