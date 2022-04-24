@@ -76,7 +76,7 @@
   * @retval None
   */
 
-uint8_t GT811_Init(void)
+uint8_t GT811::Init(void)
 {  
 	I2C_Init();
 	
@@ -87,7 +87,7 @@ uint8_t GT811_Init(void)
 	HAL_Delay(200);	
 	
 	/* if Version is correct, send the configuration parameters */
-	if(GT811_ReadID() == GT811_VERSION_VALUE)
+	if(GT811::ReadID() == GT811_VERSION_VALUE)
 	{
 		/* touch screen configuration parameter (touch screen manufacturers provide) */
 		uint8_t GTP_CFG_DATA[]=
@@ -117,7 +117,7 @@ uint8_t GT811_Init(void)
   * @param  DeviceAddr: I2C GT811 Slave address.
   * @retval The Device ID (two bytes).
   */
-uint16_t GT811_ReadID()
+uint16_t GT811::ReadID()
 {
 	uint8_t value[2];
 	I2C_ReadReg(GT811_CMD_WR,GT811_VERSION,value,2);
@@ -126,7 +126,7 @@ uint16_t GT811_ReadID()
 }
 
 
-void GT811_GetState(TS_StateTypeDef *TS_State)
+void GT811::GetState(TS_StateTypeDef *TS_State)
 {
 	uint8_t RegBuf[34];
 	

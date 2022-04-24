@@ -39,7 +39,7 @@ int main(void)
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET);
 	BSP_SDRAM_Init();
 	LCD::Init();
-	GT811_Init();
+	GT811::Init();
 
 	LCD::SetLayerVisible(1, DISABLE);
 	LCD::SelectLayer(0);
@@ -55,7 +55,7 @@ int main(void)
 	{
 		if (TS_flag == 1)
 		{
-			GT811_GetState(&TS_State);
+			GT811::GetState(&TS_State);
 			if (TS_State.touchDetected != 0)
 			{
 				TouchPoit = TS_BKState.touchDetected;
@@ -184,13 +184,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 
 #endif
-
-/**
-  * @}
-  */
-
-  /**
-	* @}
-  */
-
-  /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

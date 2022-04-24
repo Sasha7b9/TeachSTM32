@@ -80,96 +80,30 @@ namespace LCD
     static void LL_FillBuffer(uint32_t LayerIndex, void *pDst, uint32_t xSize, uint32_t ySize, uint32_t OffLine, uint32_t ColorIndex);
     static void LL_ConvertLineToARGB8888(void *pSrc, void *pDst, uint32_t xSize, uint32_t ColorMode);
 }
-/**
-  * @}
-  */
 
-  /** @defgroup STM32746G_DISCOVERY_LCD_Exported_Functions STM32746G_DISCOVERY_LCD Exported Functions
-    * @{
-    */
-
-    /**
-      * @brief  Initializes the LCD.
-      * @retval LCD state
-      */
 uint8_t LCD::Init(void)
 {
-    /* Select the used LCD */
-
-  //  /* Timing Configuration */
-  //  hLtdcHandler.Init.HorizontalSync = HSW - 1;
-  //  hLtdcHandler.Init.VerticalSync = VSW - 1;
-  //  hLtdcHandler.Init.AccumulatedHBP = HSW + HBP - 1;
-  //  hLtdcHandler.Init.AccumulatedVBP = VSW + VBP - 1;
-  //  hLtdcHandler.Init.AccumulatedActiveH = VSW + VBP +  YSIZE_PHYS - 1;
-  //  hLtdcHandler.Init.AccumulatedActiveW = HSW + HBP + XSIZE_PHYS - 1;
-  //  hLtdcHandler.Init.TotalHeigh = VSW + VBP + YSIZE_PHYS + VFP - 1;
-  //  hLtdcHandler.Init.TotalWidth = HSW + HBP + XSIZE_PHYS + HFP - 1;
-  //  
-  //  /* LCD clock configuration */
-  //  LCD::ClockConfig(&hLtdcHandler, NULL);
-
-  //  /* Initialize the LCD pixel width and pixel height */
-  //  hLtdcHandler.LayerCfg->ImageWidth  = XSIZE_PHYS;
-  //  hLtdcHandler.LayerCfg->ImageHeight = YSIZE_PHYS;
-
-  //  /* Background value */
-  //  hLtdcHandler.Init.Backcolor.Blue = 0;
-  //  hLtdcHandler.Init.Backcolor.Green = 0;
-  //  hLtdcHandler.Init.Backcolor.Red = 0;
-  //  
-  //  /* Polarity */
-  //  hLtdcHandler.Init.HSPolarity = LTDC_HSPOLARITY_AL;
-  //  hLtdcHandler.Init.VSPolarity = LTDC_VSPOLARITY_AL; 
-  //  hLtdcHandler.Init.DEPolarity = LTDC_DEPOLARITY_AL;  
-  //  hLtdcHandler.Init.PCPolarity = LTDC_PCPOLARITY_IPC;
-  //  hLtdcHandler.Instance = LTDC;
-
-  //  if(HAL_LTDC_GetState(&hLtdcHandler) == HAL_LTDC_STATE_RESET)
-  //  {
-  //    /* Initialize the LCD Msp: this __weak function can be rewritten by the application */
-  //    LCD::MspInit(&hLtdcHandler, NULL);
-  //  }
-  //  HAL_LTDC_Init(&hLtdcHandler);
-
-  //  /* Assert backlight LCD_BL_CTRL pin */
-  //  HAL_GPIO_WritePin(LCD_BL_CTRL_GPIO_PORT, LCD_BL_CTRL_PIN, GPIO_PIN_SET);
-
-    /* Initialize the SDRAM */
     BSP_SDRAM_Init();
 
-    /* Initialize the font */
     SetFont(&LCD_DEFAULT_FONT);
-
 
     return LCD_OK;
 }
 
-/**
-  * @brief  DeInitializes the LCD.
-  * @retval LCD state
-  */
 uint8_t LCD::DeInit(void)
 {
-    /* Initialize the hLtdcHandler Instance parameter */
     hLtdcHandler.Instance = LTDC;
 
-    /* Disable LTDC block */
     __HAL_LTDC_DISABLE(&hLtdcHandler);
 
-    /* DeInit the LTDC */
     HAL_LTDC_DeInit(&hLtdcHandler);
 
-    /* DeInit the LTDC MSP : this __weak function can be rewritten by the application */
     LCD::MspDeInit(&hLtdcHandler, NULL);
 
     return LCD_OK;
 }
 
-/**
-  * @brief  Gets the LCD X size.
-  * @retval Used LCD X size
-  */
+
 uint32_t LCD::GetXSize(void)
 {
     return hLtdcHandler.LayerCfg[ActiveLayer].ImageWidth;

@@ -1,8 +1,8 @@
 #pragma once
 #include "stm32f7xx_hal.h"
 
-#define GT811_CMD_WR		   0XBA	/* GT811 Write address  */
-#define GT811_CMD_RD   	   0XBB	/* GT811 Read  address  */
+#define GT811_CMD_WR        0XBA    /* GT811 Write address  */
+#define GT811_CMD_RD        0XBB    /* GT811 Read  address  */
 
 
 /* Max detectable simultaneous touches */
@@ -34,6 +34,9 @@ typedef struct
 } TS_StateTypeDef;
 
 
-uint8_t GT811_Init(void);
-uint16_t GT811_ReadID(void);
-void GT811_GetState(TS_StateTypeDef *TS_State);
+namespace GT811
+{
+    uint8_t  Init(void);
+    uint16_t ReadID(void);
+    void     GetState(TS_StateTypeDef *TS_State);
+}
