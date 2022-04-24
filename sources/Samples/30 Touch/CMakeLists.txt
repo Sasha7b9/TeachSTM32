@@ -1,4 +1,4 @@
-project (Device)
+project (Sample30)
 
 include_directories(..
                     ../common/_VS
