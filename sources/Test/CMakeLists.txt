@@ -27,14 +27,17 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 
 file(GLOB BSP          ../common/BSP/*.*)
 file(GLOB SRC          src/*.*)
+file(GLOB DISPLAY      src/Display/*.*)
 file(GLOB HARDWARE     src/Hardware/*.*)
 file(GLOB HARDWARE_HAL src/Hardware/HAL/*.*)
 
 source_group(BSP          FILES ${BSP})
 source_group(src          FILES ${SRC})
+source_group(Display      FILES ${DISPLAY})
 source_group(Hardware     FILES ${HARDWARE})
 source_group(Hardware/HAL FILES ${HARDWARE_HAL})
 
-add_library(${PROJECT_NAME} ${BSP} ${SRC} 
+add_library(${PROJECT_NAME} ${BSP} ${SRC}
+                            ${DISPLAY}
                             ${HARDWARE} ${HARDWARE_HAL}
 )
