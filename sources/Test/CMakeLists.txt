@@ -23,13 +23,17 @@ add_compile_options(/wd5220)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -MP -Wall")
 
-file(GLOB BSP       ../common/BSP/*.*)
-file(GLOB SRC       src/*.*)
-file(GLOB HARDWARE  src/Hardware/*.*)
 
-source_group(BSP      FILES ${BSP})
-source_group(src      FILES ${SRC})
-source_group(Hardware FILES ${HARDWARE})
+file(GLOB BSP          ../common/BSP/*.*)
+file(GLOB SRC          src/*.*)
+file(GLOB HARDWARE     src/Hardware/*.*)
+file(GLOB HARDWARE_HAL src/Hardware/HAL/*.*)
 
-add_library(${PROJECT_NAME} ${BSP} ${SRC} ${HARDWARE}
+source_group(BSP          FILES ${BSP})
+source_group(src          FILES ${SRC})
+source_group(Hardware     FILES ${HARDWARE})
+source_group(Hardware/HAL FILES ${HARDWARE_HAL})
+
+add_library(${PROJECT_NAME} ${BSP} ${SRC} 
+                            ${HARDWARE} ${HARDWARE_HAL}
 )

@@ -1,6 +1,6 @@
 #pragma once
 #include "stm32746g_sdram.h"
-#include "../../Fonts/fonts.h"
+#include "Fonts/fonts.h"
 
 typedef struct 
 { 
