@@ -1,6 +1,7 @@
 project (Test)
 
 include_directories(../common/MDK_KEIL/CMSIS/
+                    src
                     src/Hardware
                     ../common/BSP
                     ../common/stm32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc/
