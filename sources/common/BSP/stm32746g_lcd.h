@@ -1,9 +1,4 @@
 #pragma once
-
-#ifdef __cplusplus
- extern "C" {
-#endif 
-
 #include "stm32746g_sdram.h"
 #include "../Fonts/fonts.h"
 
@@ -195,7 +190,3 @@ void     BSP_LCD_DisplayOn(void);
 void     BSP_LCD_MspInit(LTDC_HandleTypeDef *hltdc, void *Params);
 void     BSP_LCD_MspDeInit(LTDC_HandleTypeDef *hltdc, void *Params);
 void     BSP_LCD_ClockConfig(LTDC_HandleTypeDef *hltdc, void *Params);
-
-#ifdef __cplusplus
-}
-#endif
