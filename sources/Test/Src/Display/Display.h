@@ -4,4 +4,6 @@
 namespace Display
 {
     void Init();
+
+    void Update();
 }
