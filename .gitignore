@@ -1,4 +1,6 @@
 *.o
 
+sources/generated/
+
 sources/Samples/30 Touch/MDK-ARM/Listings-Debug/
 sources/Samples/30 Touch/MDK-ARM/Objects-Debug/
