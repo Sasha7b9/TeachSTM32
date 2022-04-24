@@ -19,7 +19,7 @@ namespace Display
 
 void Display::Init()
 {
-    LCD::Init();
+	LCD::Init();
 
 	Touch::Init();
 
