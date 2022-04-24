@@ -914,14 +914,13 @@ interwork --depend="stm32f746i configuration\startup_stm32f746xx.d" -o"stm32f74
 ARM Macro Assembler    Page 15 
 
 
-6i configuration\startup_stm32f746xx.o" -I.\RTE\_STM32F746I_Configuration -IC:\
-Users\Sasha7b9\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -IC:\
-Users\Sasha7b9\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\
-Device\ST\STM32F7xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVIS
-ION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --predefine="STM32F746xx SETA 
-1" --predefine="_RTE_ SETA 1" --list=startup_stm32f746xx.lst ..\..\..\common\st
-m32CubeF7\Drivers\CMSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f
-746xx.s
+6i configuration\startup_stm32f746xx.o" -I.\RTE\_Debug -IC:\Users\Sasha7b9\AppD
+ata\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include -IC:\Users\Sasha7b9\AppD
+ata\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.14.1\Drivers\CMSIS\Device\ST\STM32F7xx
+\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 53
+6" --predefine="_RTE_ SETA 1" --predefine="STM32F746xx SETA 1" --predefine="_RT
+E_ SETA 1" --list=startup_stm32f746xx.lst ..\..\..\common\stm32CubeF7\Drivers\C
+MSIS\Device\ST\STM32F7xx\Source\Templates\arm\startup_stm32f746xx.s
 
 
 
