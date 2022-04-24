@@ -122,6 +122,7 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   * @param  None
   * @retval None
   */
+#ifndef WIN32
 int fputc(int ch, FILE *f)
 {
   /* write a character to the uart1 and Loop until the end of transmission */
@@ -129,6 +130,7 @@ int fputc(int ch, FILE *f)
 
   return ch;
 }
+#endif
 /* USER CODE END 1 */
 
 /**
