@@ -40,6 +40,7 @@ void Display::Update()
 	if (TS_flag == 1)
 	{
 		GT811::GetState(&TS_State);
+
 		if (TS_State.touchDetected != 0)
 		{
 			TouchPoit = TS_BKState.touchDetected;
@@ -76,9 +77,22 @@ void Display::Update()
 			}
 			TS_BKState.touchDetected = TS_State.touchDetected;
 		}
+
 		TS_flag = 0;
 	}
+	else
+	{
+		LCD::SetTextColor(LCD_COLOR_BLACK);
+		Region(800, 600).Fill(0, 50);
+	}
 }
+
+
+void Region::Fill(int x, int y)
+{
+	LCD::FillRect(x, y, width, height);
+}
+
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
