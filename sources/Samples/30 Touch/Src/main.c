@@ -39,6 +39,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "fmc.h"
+#include "stdio.h"
 
 /* USER CODE BEGIN Includes */
 #include "stm32746g_sdram.h"
