@@ -127,66 +127,62 @@ typedef enum
 #define LCD_BL_CTRL_GPIO_CLK_ENABLE()    __HAL_RCC_GPIOK_CLK_ENABLE()
 #define LCD_BL_CTRL_GPIO_CLK_DISABLE()   __HAL_RCC_GPIOK_CLK_DISABLE()
 
-/**
-  * @}
-  */ 
+namespace LCD
+{
+    uint8_t  Init(void);
+    uint8_t  DeInit(void);
+    uint32_t GetXSize(void);
+    uint32_t GetYSize(void);
+    void     SetXSize(uint32_t imageWidthPixels);
+    void     SetYSize(uint32_t imageHeightPixels);
 
-/** @addtogroup STM32746G_DISCOVERY_LCD_Exported_Functions
-  * @{
-  */
-uint8_t  BSP_LCD_Init(void);
-uint8_t  BSP_LCD_DeInit(void);
-uint32_t BSP_LCD_GetXSize(void);
-uint32_t BSP_LCD_GetYSize(void);
-void     BSP_LCD_SetXSize(uint32_t imageWidthPixels);
-void     BSP_LCD_SetYSize(uint32_t imageHeightPixels);
+    /* Functions using the LTDC controller */
+    void     LayerDefaultInit(uint16_t LayerIndex, uint32_t FrameBuffer);
+    void     LayerRgb565Init(uint16_t LayerIndex, uint32_t FB_Address);
+    void     SetTransparency(uint32_t LayerIndex, uint8_t Transparency);
+    void     SetLayerAddress(uint32_t LayerIndex, uint32_t Address);
+    void     SetColorKeying(uint32_t LayerIndex, uint32_t RGBValue);
+    void     ResetColorKeying(uint32_t LayerIndex);
+    void     SetLayerWindow(uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
 
-/* Functions using the LTDC controller */
-void     BSP_LCD_LayerDefaultInit(uint16_t LayerIndex, uint32_t FrameBuffer);
-void     BSP_LCD_LayerRgb565Init(uint16_t LayerIndex, uint32_t FB_Address);
-void     BSP_LCD_SetTransparency(uint32_t LayerIndex, uint8_t Transparency);
-void     BSP_LCD_SetLayerAddress(uint32_t LayerIndex, uint32_t Address);
-void     BSP_LCD_SetColorKeying(uint32_t LayerIndex, uint32_t RGBValue);
-void     BSP_LCD_ResetColorKeying(uint32_t LayerIndex);
-void     BSP_LCD_SetLayerWindow(uint16_t LayerIndex, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
+    void     SelectLayer(uint32_t LayerIndex);
+    void     SetLayerVisible(uint32_t LayerIndex, FunctionalState State);
 
-void     BSP_LCD_SelectLayer(uint32_t LayerIndex);
-void     BSP_LCD_SetLayerVisible(uint32_t LayerIndex, FunctionalState State);
+    void     SetTextColor(uint32_t Color);
+    uint32_t GetTextColor(void);
+    void     SetBackColor(uint32_t Color);
+    uint32_t GetBackColor(void);
+    void     SetFont(sFONT *fonts);
+    sFONT   *GetFont(void);
 
-void     BSP_LCD_SetTextColor(uint32_t Color);
-uint32_t BSP_LCD_GetTextColor(void);
-void     BSP_LCD_SetBackColor(uint32_t Color);
-uint32_t BSP_LCD_GetBackColor(void);
-void     BSP_LCD_SetFont(sFONT *fonts);
-sFONT    *BSP_LCD_GetFont(void);
+    uint32_t ReadPixel(uint16_t Xpos, uint16_t Ypos);
+    void     DrawPixel(uint16_t Xpos, uint16_t Ypos, uint32_t pixel);
+    void     Clear(uint32_t Color);
+    void     ClearStringLine(uint32_t Line);
+    void     DisplayStringAtLine(uint16_t Line, uint8_t *ptr);
+    void     DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
+    void     DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii);
 
-uint32_t BSP_LCD_ReadPixel(uint16_t Xpos, uint16_t Ypos);
-void     BSP_LCD_DrawPixel(uint16_t Xpos, uint16_t Ypos, uint32_t pixel);
-void     BSP_LCD_Clear(uint32_t Color);
-void     BSP_LCD_ClearStringLine(uint32_t Line);
-void     BSP_LCD_DisplayStringAtLine(uint16_t Line, uint8_t *ptr);
-void     BSP_LCD_DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
-void     BSP_LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint8_t Ascii);
+    void     DrawHLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length);
+    void     DrawVLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length);
+    void     DrawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
+    void     DrawRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
+    void     DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t Radius);
+    void     DrawPolygon(pPoint Points, uint16_t PointCount);
+    void     DrawEllipse(int Xpos, int Ypos, int XRadius, int YRadius);
+    void     DrawBitmap(uint32_t Xpos, uint32_t Ypos, uint8_t *pbmp);
 
-void     BSP_LCD_DrawHLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length);
-void     BSP_LCD_DrawVLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length);
-void     BSP_LCD_DrawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);
-void     BSP_LCD_DrawRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
-void     BSP_LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t Radius);
-void     BSP_LCD_DrawPolygon(pPoint Points, uint16_t PointCount);
-void     BSP_LCD_DrawEllipse(int Xpos, int Ypos, int XRadius, int YRadius);
-void     BSP_LCD_DrawBitmap(uint32_t Xpos, uint32_t Ypos, uint8_t *pbmp);
+    void     FillRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
+    void     FillCircle(uint16_t Xpos, uint16_t Ypos, uint16_t Radius);
+    void     FillPolygon(pPoint Points, uint16_t PointCount);
+    void     FillEllipse(int Xpos, int Ypos, int XRadius, int YRadius);
 
-void     BSP_LCD_FillRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
-void     BSP_LCD_FillCircle(uint16_t Xpos, uint16_t Ypos, uint16_t Radius);
-void     BSP_LCD_FillPolygon(pPoint Points, uint16_t PointCount);
-void     BSP_LCD_FillEllipse(int Xpos, int Ypos, int XRadius, int YRadius);
+    void     DisplayOff(void);
+    void     DisplayOn(void);
 
-void     BSP_LCD_DisplayOff(void);
-void     BSP_LCD_DisplayOn(void);
-
-/* These functions can be modified in case the current settings
-   need to be changed for specific application needs */
-void     BSP_LCD_MspInit(LTDC_HandleTypeDef *hltdc, void *Params);
-void     BSP_LCD_MspDeInit(LTDC_HandleTypeDef *hltdc, void *Params);
-void     BSP_LCD_ClockConfig(LTDC_HandleTypeDef *hltdc, void *Params);
+    /* These functions can be modified in case the current settings
+       need to be changed for specific application needs */
+    void     MspInit(LTDC_HandleTypeDef *hltdc, void *Params);
+    void     MspDeInit(LTDC_HandleTypeDef *hltdc, void *Params);
+    void     ClockConfig(LTDC_HandleTypeDef *hltdc, void *Params);
+}
