@@ -905,19 +905,9 @@
           <GroupName>BSP</GroupName>
           <Files>
             <File>
-              <FileName>GT811.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\common\BSP\GT811.c</FilePath>
-            </File>
-            <File>
               <FileName>GT811.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\common\BSP\GT811.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32746g_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\common\BSP\stm32746g_lcd.c</FilePath>
             </File>
             <File>
               <FileName>stm32746g_lcd.h</FileName>
@@ -925,24 +915,34 @@
               <FilePath>..\..\..\common\BSP\stm32746g_lcd.h</FilePath>
             </File>
             <File>
-              <FileName>stm32746g_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\common\BSP\stm32746g_sdram.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32746g_sdram.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\common\BSP\stm32746g_sdram.h</FilePath>
             </File>
             <File>
-              <FileName>TS_I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\common\BSP\TS_I2C.c</FilePath>
-            </File>
-            <File>
               <FileName>TS_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\common\BSP\TS_I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>GT811.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\..\..\common\BSP\GT811.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stm32746g_lcd.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\..\..\common\BSP\stm32746g_lcd.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stm32746g_sdram.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\..\..\common\BSP\stm32746g_sdram.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>TS_I2C.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\..\..\common\BSP\TS_I2C.cpp</FilePath>
             </File>
           </Files>
         </Group>
