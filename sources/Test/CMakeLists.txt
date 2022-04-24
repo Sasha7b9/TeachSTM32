@@ -2,7 +2,7 @@ project (Test)
 
 include_directories(../common/MDK_KEIL/CMSIS/
                     src
-                    src/Hardware
+                    src/Hardware/HAL
                     ../common/BSP
                     ../common/stm32CubeF7/Drivers/STM32F7xx_HAL_Driver/Inc/
                     ../common/stm32CubeF7/Drivers/CMSIS/Device/ST/STM32F7xx/Include/
@@ -17,6 +17,7 @@ add_compile_options(/wd4244)
 add_compile_options(/wd4365)
 add_compile_options(/wd4459)
 add_compile_options(/wd4464)
+add_compile_options(/wd4514)
 add_compile_options(/wd4820)
 add_compile_options(/wd5045)
 add_compile_options(/wd5219)

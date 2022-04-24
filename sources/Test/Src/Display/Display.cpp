@@ -1,5 +1,7 @@
+#include "defines.h"
 #include "Display/Display.h"
 #include "Display/Touch/Touch.h"
+#include "Hardware/Timer.h"
 #include <stm32746g_lcd.h>
 #include <stm32746g_LCD.h>
 #include <GT811.h>
@@ -37,6 +39,8 @@ void Display::Init()
 
 void Display::Update()
 {
+	static TimeMeter meter;
+
 	if (TS_flag == 1)
 	{
 		GT811::GetState(&TS_State);
@@ -79,11 +83,16 @@ void Display::Update()
 		}
 
 		TS_flag = 0;
+
+		meter.Reset();
 	}
 	else
 	{
-		LCD::SetTextColor(LCD_COLOR_BLACK);
-		Region(800, 600).Fill(0, 50);
+		if (meter.ElapsedTime() > 10)
+		{
+			LCD::SetTextColor(LCD_COLOR_BLACK);
+			Region(1024, 550).Fill(0, 50);
+		}
 	}
 }
 
