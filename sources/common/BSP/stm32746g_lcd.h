@@ -127,7 +127,7 @@ typedef enum
 #define LCD_BL_CTRL_GPIO_CLK_ENABLE()    __HAL_RCC_GPIOK_CLK_ENABLE()
 #define LCD_BL_CTRL_GPIO_CLK_DISABLE()   __HAL_RCC_GPIOK_CLK_DISABLE()
 
-namespace LCD
+namespace LCD   
 {
     uint8_t  Init(void);
     uint8_t  DeInit(void);
