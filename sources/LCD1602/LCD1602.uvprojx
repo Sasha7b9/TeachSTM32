@@ -932,6 +932,21 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>Hardware/LCD1602</GroupName>
+          <Files>
+            <File>
+              <FileName>LCD1602.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\src\Hardware\LCD1602\LCD1602.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>LCD1602.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\Hardware\LCD1602\LCD1602.h</FilePath>
+            </File>
+          </Files>
+        </Group>
       </Groups>
     </Target>
   </Targets>
