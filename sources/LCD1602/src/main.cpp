@@ -5,14 +5,14 @@
 
 int main(void)
 {
-	HAL::Init();
+    HAL::Init();
 
-	Display::Init();
+    Display::Init();
 
     LCD1602::Init();
 
-	while (1)
-	{
-		Display::Update();
-	}
+    while (1)
+    {
+        Display::Update();
+    }
 }
