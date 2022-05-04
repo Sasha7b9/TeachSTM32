@@ -1,4 +1,14 @@
 *.o
+*.d
+*.dep
+*.lnp
+*.sct
+*.dbgconf
+*.lst
+*.scvd
+*.map
+*.axf
+
 
 sources/generated/
 
