@@ -19,3 +19,9 @@ void TimeMeter::Reset()
 {
     time_reset = TIME_MS;
 }
+
+
+void Timer::Delay(uint timeMS)
+{
+    HAL_Delay(timeMS);
+}

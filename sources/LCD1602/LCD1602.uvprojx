@@ -755,6 +755,11 @@
               <FileType>8</FileType>
               <FilePath>Src\main.cpp</FilePath>
             </File>
+            <File>
+              <FileName>defines.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\src\defines.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
